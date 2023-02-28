@@ -1,4 +1,4 @@
-export const ExploreTopBooks = () => {
+export const ExploreTopMovies = () => {
     return (
         <div className='p-5 mb-4 bg-dark header'>
             <div className='container-fluid py-5 text-white 
@@ -14,4 +14,4 @@ export const ExploreTopBooks = () => {
     );
 }
 
-export default ExploreTopBooks;
+export default ExploreTopMovies;
