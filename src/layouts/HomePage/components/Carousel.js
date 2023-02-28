@@ -29,20 +29,20 @@ export const Carousel = () => {
                             ))}
                         </div>
                     </div>
-                    {/* <div className='carousel-item'>
+                    <div className='carousel-item'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                            {books.slice(3, 6).map(book => (
-                                <ReturnBook book={book} key={book.id} />
+                            {movies.slice(3, 6).map(movie => (
+                                <MovieCard movie={movie} key={movie.id} />
                             ))}
                         </div>
                     </div>
                     <div className='carousel-item'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                            {books.slice(6, 9).map(book => (
-                                <ReturnBook book={book} key={book.id} />
+                            {movies.slice(6, 9).map(movie => (
+                                <MovieCard movie={movie} key={movie.id} />
                             ))}
                         </div>
-                    </div> */}
+                    </div>
                     <button className='carousel-control-prev' type='button'
                         data-bs-target='#carouselExampleControls' data-bs-slide='prev'>
                         <span className='carousel-control-prev-icon' aria-hidden='true'></span>
