@@ -1,5 +1,16 @@
-export const Carousel = () => {
+import { useEffect, useState } from "react";
+import axios from "axios";
+import MovieCard from "./MovieCard";
 
+export const Carousel = () => {
+    const [movies, setmovies] = useState([]);
+
+    useEffect(() => {
+        axios.get('https://api.themoviedb.org/3/tv/popular?api_key=289c0466c2ac7d4a05f40b2fd3e73998&language=en-US&page=1').then(response => {
+            console.log(response.data.results);
+            setmovies(response.data.results);
+        }).catch(err => console.log(err))
+    }, []);
 
     return (
         <div className='container mt-5' style={{ height: 550 }}>
@@ -13,12 +24,12 @@ export const Carousel = () => {
                 <div className='carousel-inner'>
                     <div className='carousel-item active'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                            {books.slice(0, 3).map(book => (
-                                <ReturnBook book={book} key={book.id} />
+                            {movies.slice(0, 3).map(movie => (
+                                <MovieCard movie={movie} key={movie.id} />
                             ))}
                         </div>
                     </div>
-                    <div className='carousel-item'>
+                    {/* <div className='carousel-item'>
                         <div className='row d-flex justify-content-center align-items-center'>
                             {books.slice(3, 6).map(book => (
                                 <ReturnBook book={book} key={book.id} />
@@ -31,7 +42,7 @@ export const Carousel = () => {
                                 <ReturnBook book={book} key={book.id} />
                             ))}
                         </div>
-                    </div>
+                    </div> */}
                     <button className='carousel-control-prev' type='button'
                         data-bs-target='#carouselExampleControls' data-bs-slide='prev'>
                         <span className='carousel-control-prev-icon' aria-hidden='true'></span>
@@ -46,16 +57,17 @@ export const Carousel = () => {
             </div>
 
             {/* Mobile */}
-            <div className='d-lg-none mt-3'>
+            {/* <div className='d-lg-none mt-3'>
                 <div className='row d-flex justify-content-center align-items-center'>
                     <ReturnBook book={books[7]} key={books[7].id} />
                 </div>
             </div>
             <div className='homepage-carousel-title mt-3'>
                 <Link className='btn btn-outline-secondary btn-lg' to='/search'>View More</Link>
-            </div>
+            </div> */}
         </div>
     );
+
 }
 
 export default Carousel;
