@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 
 const Navbar = () => {
     return (
@@ -15,10 +16,10 @@ const Navbar = () => {
                 <div className='collapse navbar-collapse' id='navbarNavDropdown'>
                     <ul className='navbar-nav'>
                         <li className='nav-item'>
-                            <a className='nav-link' to='/'> Home</a>
+                            <NavLink className='nav-link' to='/home'> Home</NavLink>
                         </li>
                         <li className='nav-item'>
-                            <a className='nav-link' to='/SearchTVShowsPage'> TVShows</a>
+                            <NavLink className='nav-link' to='/searchTVShows'> TVShows</NavLink>
                         </li>
 
                     </ul>
