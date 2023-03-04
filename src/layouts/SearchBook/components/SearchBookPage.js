@@ -1,18 +1,32 @@
 import { useState, useEffect } from "react";
 import SearchBook from "./SearchBook";
 import axios from "axios";
+import Pagination from "../../Pagination/Pagination";
 
 const SearchBooksPage = () => {
 
     const [movies, setmovies] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [moviesPerPage] = useState(5);
 
     useEffect(() => {
+        setLoading(true);
         axios.get('https://api.themoviedb.org/3/tv/popular?api_key=289c0466c2ac7d4a05f40b2fd3e73998&language=en-US&page=1').then(response => {
             setmovies(response.data.results);
 
             console.log(response.data);
         }).catch(err => console.log(err))
+        setLoading(false);
     }, []);
+
+    //Get current posts
+    const indexOfLastMovie = currentPage * moviesPerPage;
+    const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
+    const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
+
+    //Change page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
         <div>
@@ -95,9 +109,10 @@ const SearchBooksPage = () => {
                     <p>
                         1 to 5 of 22 items:
                     </p>
-                    {movies.map(movie => (
-                        <SearchBook movie={movie} key={movie.id} />
+                    {currentMovies.map(movie => (
+                        <SearchBook movie={movie} key={movie.id} loading={loading} />
                     ))}
+                    <Pagination moviesPerPage={moviesPerPage} totalMovies={movies.length} paginate={paginate}/>
                 </div>
             </div>
         </div>

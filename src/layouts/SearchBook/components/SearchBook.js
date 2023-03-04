@@ -15,6 +15,14 @@ const SearchBook = (props) => {
                             alt='Book'
                         />
                     </div>
+                    <div className='d-lg-none d-flex justify-content-center 
+                        align-items-center'>
+                        <img src={getPosteURL(props.movie.poster_path)}
+                            width='143'
+                            height='216'
+                            alt='Book'
+                        />
+                    </div>
                 </div>
                 <div className='col-md-6'>
                     <div className='card-body'>
