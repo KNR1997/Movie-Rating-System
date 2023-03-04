@@ -20,7 +20,7 @@ const SearchBooksPage = () => {
         setLoading(false);
     }, []);
 
-    //Get current posts
+    //Get current movies
     const indexOfLastMovie = currentPage * moviesPerPage;
     const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
     const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
@@ -104,10 +104,10 @@ const SearchBooksPage = () => {
                         </div>
                     </div>
                     <div className='mt-3'>
-                        <h5>Number of results: (22)</h5>
+                        <h5>Number of results: {movies.length}</h5>
                     </div>
                     <p>
-                        1 to 5 of 22 items:
+                        {indexOfFirstMovie} to {indexOfLastMovie} of {movies.length} items:
                     </p>
                     {currentMovies.map(movie => (
                         <SearchBook movie={movie} key={movie.id} loading={loading} />
