@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import SearchBook from "./SearchBook";
 import axios from "axios";
 
@@ -21,45 +21,72 @@ const SearchBooksPage = () => {
                     <div className="row mt-5">
                         <div className="col-6">
                             <div className="d-flex">
-                                <input className="form-control me-2" type='search' placeholder="Search" aria-labelledby="Search" /> 
+                                <input className="form-control me-2" type='search' placeholder="Search" aria-labelledby="Search" />
                                 <button className="btn btn-outline-success">Search</button>
                             </div>
                         </div>
                         <div className='col-4'>
-                            <div className='dropdown'>
-                                <button className='btn btn-secondary dropdown-toggle' type='button'
-                                    id='dropdownMenuButton1' data-bs-toggle='dropdown'
-                                    aria-expanded='false'>
-                                        Category
-                                </button>
-                                <ul className='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
-                                    <li>
-                                        <a className='dropdown-item' href='#'>
-                                            All
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className='dropdown-item' href='#'>
-                                            Front End
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className='dropdown-item' href='#'>
-                                            Back End
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className='dropdown-item' href='#'>
-                                            Data
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className='dropdown-item' href='#'>
-                                            DevOps
-                                        </a>
-                                    </li>
-                                </ul>
+                            <div className="d-flex">
+                                <div className='dropdown me-2'>
+                                    <button className='btn btn-secondary dropdown-toggle' type='button'
+                                        id='dropdownMenuButton1' data-bs-toggle='dropdown'
+                                        aria-expanded='false'>
+                                        Movies
+                                    </button>
+                                    <ul className='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
+                                        <li>
+                                            <a className='dropdown-item' href='#'>
+                                                Popular
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className='dropdown-item' href='#'>
+                                                Now Playing
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className='dropdown-item' href='#'>
+                                                Upcoming
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className='dropdown-item' href='#'>
+                                                Top Rated
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className='dropdown'>
+                                    <button className='btn btn-secondary dropdown-toggle' type='button'
+                                        id='dropdownMenuButton1' data-bs-toggle='dropdown'
+                                        aria-expanded='false'>
+                                        TVShows
+                                    </button>
+                                    <ul className='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
+                                        <li>
+                                            <a className='dropdown-item' href='#'>
+                                                Popular
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className='dropdown-item' href='#'>
+                                                Airing Today
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className='dropdown-item' href='#'>
+                                                On TV
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className='dropdown-item' href='#'>
+                                                Top Rated
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                     <div className='mt-3'>
