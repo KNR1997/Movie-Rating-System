@@ -59,10 +59,10 @@ export const Carousel = () => {
             {/* Mobile */}
             {/* <div className='d-lg-none mt-3'>
                 <div className='row d-flex justify-content-center align-items-center'>
-                    <ReturnBook book={books[7]} key={books[7].id} />
+                    <MovieCard movie={movies[7]} key={movies[7].id} />
                 </div>
-            </div>
-            <div className='homepage-carousel-title mt-3'>
+            </div> */}
+            {/* <div className='homepage-carousel-title mt-3'>
                 <Link className='btn btn-outline-secondary btn-lg' to='/search'>View More</Link>
             </div> */}
         </div>

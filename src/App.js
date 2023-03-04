@@ -1,21 +1,17 @@
-import ExploreTopMovies from "./layouts/HomePage/components/ExploreTopMovies";
 import Footer from "./layouts/HomePage/NavbarAndFooter/Footer";
 import Navbar from "./layouts/HomePage/NavbarAndFooter/Navbar";
 import "./App.css";
-import Heros from "./layouts/HomePage/components/Heros";
-import MovieServices from "./layouts/HomePage/components/MovieServices";
-import Carousel from "./layouts/HomePage/components/Carousel";
+import HomePage from "./layouts/HomePage/HomePage";
+import SearchBooksPage from "./layouts/SearchBook/components/SearchBookPage";
 
 function App() {
 
   return (
     <div>
       <Navbar />
-      <Carousel />
-      <ExploreTopMovies />
-      <Heros/>
-      <MovieServices/>
-      <Footer/>
+      {/* <HomePage /> */}
+      <SearchBooksPage />
+      <Footer />
     </div>
 
   );
