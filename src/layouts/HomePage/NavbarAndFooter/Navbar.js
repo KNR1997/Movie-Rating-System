@@ -16,7 +16,7 @@ export const Navbar = () => {
                             <a className='nav-link' to='/home'> Home</a>
                         </li>
                         <li className='nav-item'>
-                            <a className='nav-link' to='/search'> Search</a>
+                            <a className='nav-link' to='/search'> TVShows</a>
                         </li>
 
                     </ul>
