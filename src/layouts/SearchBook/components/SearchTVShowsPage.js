@@ -3,7 +3,7 @@ import SearchBook from "./SearchBook";
 import axios from "axios";
 import Pagination from "../../Pagination/Pagination";
 
-const SearchBooksPage = () => {
+const SearchTVShowsPage = () => {
 
     const [movies, setmovies] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -156,4 +156,4 @@ const SearchBooksPage = () => {
     );
 }
 
-export default SearchBooksPage;
+export default SearchTVShowsPage;

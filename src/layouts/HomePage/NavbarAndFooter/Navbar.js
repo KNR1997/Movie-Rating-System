@@ -1,4 +1,6 @@
-export const Navbar = () => {
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
     return (
         <nav className='navbar navbar-expand-lg navbar-dark main-color py-3'>
             <div className='container-fluid'>
@@ -13,10 +15,10 @@ export const Navbar = () => {
                 <div className='collapse navbar-collapse' id='navbarNavDropdown'>
                     <ul className='navbar-nav'>
                         <li className='nav-item'>
-                            <a className='nav-link' to='/home'> Home</a>
+                            <a className='nav-link' to='/'> Home</a>
                         </li>
                         <li className='nav-item'>
-                            <a className='nav-link' to='/search'> TVShows</a>
+                            <a className='nav-link' to='/SearchTVShowsPage'> TVShows</a>
                         </li>
 
                     </ul>
