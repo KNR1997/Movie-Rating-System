@@ -8,19 +8,21 @@ import SearchTVShowsPage from "./layouts/SearchBook/components/SearchTVShowsPage
 function App() {
 
   return (
-    <div>
+    <div className="d-flex flex-column min-vh-100">
       <Navbar />
-      <Switch>
-        <Route path='/' exact>
-          <Redirect to='/home' />
-        </Route>
-        <Route path='/home' exact>
-          <HomePage />
-        </Route>
-        <Route path='/searchTVShows'>
-          <SearchTVShowsPage />
-        </Route>
-      </Switch>
+      <div className="flex-grow-1">
+        <Switch>
+          <Route path='/' exact>
+            <Redirect to='/home' />
+          </Route>
+          <Route path='/home' exact>
+            <HomePage />
+          </Route>
+          <Route path='/searchTVShows'>
+            <SearchTVShowsPage />
+          </Route>
+        </Switch>
+      </div>
       <Footer />
     </div>
 
